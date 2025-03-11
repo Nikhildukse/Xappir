@@ -13,9 +13,9 @@ export const createCheckin = async (req, res) => {
         const newCheckin = await prisma.checkin.create({
             data: {
                 clientname,
-                ckeckindate,  // Fixed typo
+                ckeckindate,  
                 checkoutedate,
-                guest,
+                guest:guest.toString(),
                 rooms,
                 adharno1,
                 adharno2
